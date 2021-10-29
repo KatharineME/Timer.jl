@@ -8,9 +8,9 @@ macro runtime(args...)
 
     st = now()
 
-    println("Starting ", fu, " at ", st)
+    println("Starting ", args, " at ", st)
 
-    println(args...)
+    eval(args...)
 
     en = now()
 
