@@ -8,6 +8,8 @@ macro runtime(args...)
 
     st = now()
 
+    @show args
+    
     println("Starting at ", st)
 
     eval(args...)
