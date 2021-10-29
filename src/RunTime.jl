@@ -1,8 +1,8 @@
 module RunTime
 
-using Dates: now, CompoundPeriod
+using Dates: now, canonicalize, CompoundPeriod
 
-macro runtime(fu)
+macro runtime(args...)
 
     println("-"^80)
 
@@ -10,7 +10,7 @@ macro runtime(fu)
 
     println("Starting ", fu, " at ", st)
 
-    fu 
+    println(args...)
 
     en = now()
 
