@@ -9,7 +9,7 @@ macro runtime(args...)
     st = now()
 
     @show args
-    
+
     println("Starting at ", st)
 
     eval(args...)
@@ -20,7 +20,7 @@ macro runtime(args...)
 
     println("Took ", canonicalize(CompoundPeriod(en - st)))
 
-    println()
+    return println()
 
 end
 
